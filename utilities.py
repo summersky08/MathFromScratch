@@ -1,19 +1,12 @@
 
 # coding: utf-8
 
-# In[2]:
-
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
-# In[2]:
-
 from math import floor, ceil
 
-
-# In[ ]:
 
 def rootfinding1(func, x_min=-100, x_max=100, max_iter=100, func_arg=[], random_search=True):
     '''
@@ -68,8 +61,6 @@ def rootfinding1(func, x_min=-100, x_max=100, max_iter=100, func_arg=[], random_
     return med
 
 
-# In[ ]:
-
 def rootfinding2(func, x_min=0, x_max=1, max_iter=100, h=.0001, func_arg=[]):
     '''
     Solve an equation by Newton method.
@@ -109,9 +100,11 @@ def rootfinding2(func, x_min=0, x_max=1, max_iter=100, h=.0001, func_arg=[]):
     return a
 
 
-# In[ ]:
 
-'''
+
+def rootfinding3(func, x_min=False, x_max=False, max_iter=100, func_arg=[]):
+    
+    '''
     Solve an equation by secant method.
     
     Parameters:
@@ -126,8 +119,7 @@ def rootfinding2(func, x_min=0, x_max=1, max_iter=100, h=.0001, func_arg=[]):
     Returns:
         a: float
             optimal value of x
-'''
-def rootfinding3(func, x_min=False, x_max=False, max_iter=100, func_arg=[]):
+    '''
     
     a,b = np.random.random(2)
     
@@ -143,8 +135,6 @@ def rootfinding3(func, x_min=False, x_max=False, max_iter=100, func_arg=[]):
         
     return a
 
-
-# In[ ]:
 
 def rootfindingNR(func_list, init, h=.001, max_iter=10):
     '''
@@ -182,8 +172,6 @@ def rootfindingNR(func_list, init, h=.001, max_iter=10):
     return x
 
 
-# In[ ]:
-
 def comb(a, b):
     '''
     Computes combination (binomial coefficient) of a and b (combinations to choose b out of a i.e. a!/(b!(a-b)!))
@@ -211,8 +199,6 @@ def comb(a, b):
         return (a/b)*comb(a-1, b-1)
 
 
-# In[ ]:
-
 def factorial(k):
     '''
     Returns k factorial: k! = 1 * 2 * ... * k
@@ -222,8 +208,6 @@ def factorial(k):
     else:
         return k*factorial(k-1)
 
-
-# In[3]:
 
 def differentiate(func, a, h=.001, order=1, func_arg=[], float128=False):
 '''
@@ -274,8 +258,6 @@ Example:
     else:
         return (differentiate(func, a+h, h=h, order=order-1, func_arg=func_arg)                     - differentiate(func, a, h=h, order=order-1, func_arg=func_arg))/h
 
-
-# In[9]:
 
 def partial_diff(func, func_arg, variable=0, h=.001, order=1, var_order=False):
     '''
@@ -332,8 +314,6 @@ def partial_diff(func, func_arg, variable=0, h=.001, order=1, var_order=False):
             return (partial_diff(func, func_arg2, variable, h=h, order=order-1) - partial_diff(func, func_arg, variable, h=h, order=order-1))/h
 
 
-# In[4]:
-
 def grad(func, func_arg, h=.001):
 '''
 Compute gradient of the given function
@@ -368,8 +348,6 @@ array([10.001,  3.   ,  3.   ])
     gradient = np.array(gradient)
     return gradient
 
-
-# In[15]:
 
 def jacobian(func_list, init, determinant=False, h=.001):
 '''
@@ -420,8 +398,6 @@ Example:
         return J
 
 
-# In[ ]:
-
 def hessian(func, func_arg, h=.001):
 '''
 Computes Hessian matrix of the given function and variables
@@ -463,8 +439,6 @@ Example:
     return H
 
 
-# In[3]:
-
 def integral1(func, lower, upper, h, func_arg=[]):
     n = int((upper - lower) // h)
     sum_ = 0
@@ -473,8 +447,6 @@ def integral1(func, lower, upper, h, func_arg=[]):
     
     return sum_
 
-
-# In[4]:
 
 def integral2(func, lower, upper, h, func_arg=[]):
     n = int((upper - lower) // h)
@@ -486,8 +458,6 @@ def integral2(func, lower, upper, h, func_arg=[]):
     
     return main + margin
 
-
-# In[26]:
 
 def integral3(func, lower, upper, h, func_arg=[]):
     n = np.floor((upper - lower) // h).astype(int)
@@ -501,8 +471,6 @@ def integral3(func, lower, upper, h, func_arg=[]):
     
     return h/3*sum_
 
-
-# In[6]:
 
 def integral4(func, lower, upper, h, func_arg=[]):
     n = np.floor((upper - lower) // h).astype(int)
@@ -523,14 +491,10 @@ def integral4(func, lower, upper, h, func_arg=[]):
     return 3*h/8*(term1 + 3*term2 + 2*term3 + term4)
 
 
-# In[7]:
-
 def integral_MonteCarlo(func, lower, upper, h=False, n_sample=1e+4, rv='uniform', func_arg=[]):
     rvs = np.random.random(int(n_sample))*(upper-lower) + lower
     return (upper - lower)*func(*([rvs]+func_arg)).mean()
 
-
-# In[8]:
 
 def integral(func, lower, upper, h, func_arg=[], algo='Simpson1', n_sample=1e+4, rv='uniform'):
     '''
@@ -588,8 +552,6 @@ def integral(func, lower, upper, h, func_arg=[], algo='Simpson1', n_sample=1e+4,
         return integral4(func, lower, upper, h, func_arg)
 
 
-# In[ ]:
-
 def taylor(func, x, a, limit=5, h=.0001, func_arg=[], float128=False):
     '''
     Compute Taylor series (approximation) of the given function around point a i.e.
@@ -644,8 +606,6 @@ def taylor(func, x, a, limit=5, h=.0001, func_arg=[], float128=False):
     return y_list
 
 
-# In[24]:
-
 def convolution1d(func1, func2, t, lower=-100, upper=100, h=.01, func1_arg=[], func2_arg=[]):
     '''
     Compute convolution of two functions
@@ -685,8 +645,6 @@ def convolution1d(func1, func2, t, lower=-100, upper=100, h=.01, func1_arg=[], f
     return integral(FUNC, lower=lower, upper=upper, h=h, func_arg=[t], algo='ordinary')
 
 
-# In[ ]:
-
 def Fourier_series(func, n, lower=-np.pi, upper=np.pi, h=.01, func_arg=[]):
     '''
     Compute coefficient of Fourier series (approximation) of the given function
@@ -719,8 +677,6 @@ def Fourier_series(func, n, lower=-np.pi, upper=np.pi, h=.01, func_arg=[]):
         
     return coef
 
-
-# In[ ]:
 
 def Fourier_transform(func, xi, lower=-100, upper=100, h=.01, func_arg=[], const=False, inverse=False):
     '''
