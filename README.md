@@ -1,5 +1,6 @@
 # MathFromScratch
-Implementation and visualization of various math theorems, formulae, operations and examples only using built-in modules and NumPy.
+Implementation and visualization of various math theorems, formulae, operations and examples only using built-in modules and NumPy. Implementing math operations from scratch and playing with them changing various parameters give us deeper and more conceptual understanding of math. In addition, building something from scrach is fun!
+In each tutorial, details explanation of each implementation is shown and also you know how to use it.
 
 ## Requirments
 - NumPy
