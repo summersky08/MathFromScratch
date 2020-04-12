@@ -7,24 +7,29 @@ In each tutorial, details explanation of each implementation is shown and also y
 - Matplotlib
 
 ## Tutorials
-### 1. Descrete Math
+### 1. Geometry
+- Triangle
+- Circle
+- Ellipsoid, Hypobolic
+
+### 2. Descrete Math
 - Combination
 - Factorial
 
-### 2. Differentiation
+### 3. Differentiation
 - Differentiation
 - Gradient
 - Hessian Matrix
 - Jacobian Matrix
 
-### 3. Integration
+### 4. Integration
 - Integration
 - Numerical Integration Algorithms
 - Convolution
 - Fourier Transform
 - Continuous Fourier Transform
 
-### 4. Linear Algebra
+### 5. Linear Algebra
 - Elementary Operation
 - Rank
 - Inverse Matrix
@@ -35,11 +40,19 @@ In each tutorial, details explanation of each implementation is shown and also y
 - Cholesky Factorization
 - LDL Factorization
 
-### 5. Probability & Statistics
+### 6. Probability & Statistics
 - Descrete Distributions
+  - Bernoulli Distribution
+  - Binomial Distribution
+  - Poisson Distribution
+  - Geometric Distribution
 - Continuous Distributions
+  - Uniform Distribution
+  - Gaussian Distribution
+  - Exponential Distribution
+- Cumulative Distribution Function (CDF)
 
-### 6. Rootfinding and Optimization
+### 7. Rootfinding and Optimization
 - 1D Rootfinding Algorithms
   - Bisection Method
   - Newton Method
@@ -51,7 +64,9 @@ In each tutorial, details explanation of each implementation is shown and also y
   - Newton Method
   - Quasi-Newton Method
 
-### 7. Differential Equation
+### 8. Differential Equation
 - Numerical Differential Equation
   - Euler Method
   - Runge-Kutta Method
+
+## References
