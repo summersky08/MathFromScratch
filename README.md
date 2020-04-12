@@ -50,3 +50,8 @@ In each tutorial, details explanation of each implementation is shown and also y
   - Gradient Descent
   - Newton Method
   - Quasi-Newton Method
+
+### 7. Differential Equation
+- Numerical Differential Equation
+  - Euler Method
+  - Runge-Kutta Method
