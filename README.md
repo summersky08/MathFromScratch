@@ -16,20 +16,7 @@ In each tutorial, details explanation of each implementation is shown and also y
 - Combination
 - Factorial
 
-### 3. Differentiation
-- Differentiation
-- Gradient
-- Hessian Matrix
-- Jacobian Matrix
-
-### 4. Integration
-- Integration
-- Numerical Integration Algorithms
-- Convolution
-- Fourier Transform
-- Continuous Fourier Transform
-
-### 5. Linear Algebra
+### 3. Linear Algebra
 - Elementary Operation
 - Rank
 - Inverse Matrix
@@ -39,6 +26,19 @@ In each tutorial, details explanation of each implementation is shown and also y
 - LU Factorization
 - Cholesky Factorization
 - LDL Factorization
+
+### 4. Differentiation
+- Differentiation
+- Gradient
+- Hessian Matrix
+- Jacobian Matrix
+
+### 5. Integration
+- Integration
+- Numerical Integration Algorithms
+- Convolution
+- Fourier Transform
+- Continuous Fourier Transform
 
 ### 6. Probability & Statistics
 - Descrete Distributions
