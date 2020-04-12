@@ -29,6 +29,7 @@ In each tutorial, details explanation of each implementation is shown and also y
 
 ### 4. Differentiation
 - Differentiation
+- Taylor Series
 - Gradient
 - Hessian Matrix
 - Jacobian Matrix
