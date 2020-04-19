@@ -49,7 +49,7 @@ In each tutorial, details explanation of each implementation is shown and also y
 - Continuous Fourier Transform
 
 ### 6. Probability & Statistics
-- Descrete Distributions
+- [Descrete Distributions](https://github.com/rkato5680/MathFromScratch/blob/master/Discrete%2BDistributions.ipynb)
   - Bernoulli Distribution
   - Binomial Distribution
   - Poisson Distribution
